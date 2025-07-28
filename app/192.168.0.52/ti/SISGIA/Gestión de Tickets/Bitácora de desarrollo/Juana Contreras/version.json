@@ -1,0 +1,215 @@
+{
+	"v6.8.19":
+	{
+		"fecha de release" : "2025-04-03",
+		"tickets" :[
+			{
+				"ticket" : "[2025-03-03] SISGIA.13.5.426.5",
+				"module" : "HOT-FIX - Administración/CxC",
+				"title" : "Asignación de permisos",
+				"details" : 
+				{
+					"paso1" : "Se agrega el id de usuario de Analista Contable en el json para el acceso al módulo CxC."
+				}
+			},
+			{
+				"ticket" : "[2025-03-28] SISGIA.11.5.426.2",
+				"module" : "HOT-FIX - Red/Mapa",
+				"title" : "Implementación de filtros en mapa de la red para mascotas",
+				"details" : 
+				{
+					"paso1" : "Se agregó y validó el filtro de Tipo de afiliación.",
+					"paso2" : "Se validó el tipo de afiliación para agregar los pines correctos en el mapa.",
+                    "paso3" : "Se cambió el estilo y posición de los filtros para el mapa."
+				}
+			},
+			{
+				"ticket" : "[2025-03-28] SISGIA.11.5.426.3",
+				"module" : "HOT-FIX - Reporte/Red",
+				"title" : "Agregar filtro de país y tipo agencia",
+				"details" : 
+				{
+					"paso1" : "Se agregaron y validaron los filtros de Pais, Tipo agencia.",
+					"paso2" : "Se agregaron las columnas de pais y tipo agencia en la tabla de resultados.",
+                    "paso3" : "Se agregaron las columnas de pais y tipo agencia en el excel que se genera a partir del botón Exportar XLS."
+				}
+			},
+			{
+				"ticket" : "[2025-03-28] SISGIA.11.5.426.4",
+				"module" : "HOT-FIX - Red/Prospecto",
+				"title" : "Integrar validación de permisos por tipo de puesto",
+				"details" : 
+				{
+					"paso1" : "Se integró la validación para mostrar botones de acuerdo al área(redes y operaciones)."
+				}
+			}
+		]
+	},
+	"v6.8.20":
+	{
+		"fecha de release" : "2025-04-08",
+		"tickets" :[
+			{
+				"ticket" : "[2025-04-07] SISGIA.3.5.426.2",
+				"module" : "HOT-FIX - Reportes/Red",
+				"title" : "Integración de alertas en filtros de búsqueda",
+				"details" : {
+                    "paso1" : "Se agregó validación para filtro obligatorio de pais y tipo agencia."
+                }
+			}
+		]
+	},
+	"v6.8.21":
+	{
+		"fecha de release" : "2025-05-07",
+		"tickets" :[
+			{
+				"ticket" : "[2025-04-23] SISGIA.5.5.426.3",
+				"module" : "HOT-FIX - Cliente/Contratante",
+				"title" : "Organización de informacion por bloques en pestaña general",
+				"details" : {
+                    "paso1": "Se organiza la información por sección y también se agrega el campo de teléfono de asistencia."
+                }
+			},
+			{
+				"ticket" : "[2025-04-30] SISGIA.12.4.288.1",
+				"module" : "HOT-FIX - Usuarios / Datos",
+				"title" : "Actualización de permisos - Jurídico",
+				"details" : 
+				{
+				}
+			},
+			{
+				"ticket" : "[2025-04-30] SISGIA.5.4.426.2",
+				"module" : "HOT-FIX - Servicio / Crear",
+				"title" : "No permitir generar servicio al titular si no esta definido en el plan",
+				"details" : 
+				{
+                    "paso1" : "Se agrega validación para mostrar el input para generar contrato cuando el plan incluya titular, en caso contrario muestra un alerta."
+				}
+			},
+			{
+				"ticket" : "[2025-05-05] SISGIA.11.5.426.2",
+				"module" : "HOT-FIX - Hoja de servicio",
+				"title" : "Error de autorización en agencia funeraria",
+				"details" : 
+				{
+                    "paso1" : "Se agrega parámetro correcto al cargar un servicio de tipo prospecto."
+				}
+			}
+		]
+	},
+	"v6.8.22":
+	{
+		"fecha de release" : "2025-05-08",
+		"tickets" :[
+			{
+				"ticket" : "[2025-05-07] SISGIA.5.5.426.1",
+				"module" : "Configuración / Versión",
+				"title" : "Nuevo módulo para control de versiones",
+				"details" : {
+                    "paso1" : "Se agrega nuevo módulo para control de versiones.",
+                    "paso2" : "Se integra un JSON de lado de AWS - S3 - configuraciones/dataVersion.json.",
+                    "paso3" : "Se muestra versionamiento en apartado de versiones."
+                }
+			}
+		]
+	},
+    "v6.8.23":
+	{
+		"fecha de release" : "2025-05-26",
+		"tickets" :[
+			{
+				"ticket" : "[2025-03-27] SISGIA.13.5.426.3",
+				"module" : "HOT-FIX - CxC",
+				"title" : " Permitir carga de notas de crédito con claves PPD / 99 y PUE / 03",
+				"details" : 
+				{
+                    "paso1" : "Se agrega validación para cargar notas de crédito de tipo PPD y PUE con formas de pagos 03 y 99.",
+                    "paso2" : "Se agrega validación con mensajes de error en carga de notas de crédito cuando el  CFDI, régimen fiscal, método de pago, tipo relación y  forma de pago sean incorrectos.",
+                    "paso3" : "Se agrega validación con mensajes de error en carga de factura cuando el  CFDI, régimen fiscal, método de pago y  forma de pago sean incorrectos.",
+                    "paso4" : "Se agrean nuevos campos en db para cargar factura y notas de crédito(forma_pago, cfdi_receptor, regimen_fiscal_receptor), y carga complemento(forma_pago, cfdi_receptor). ",
+                    "paso5" : "Se agrega validación con mensajes de error en carga de complementos cuando el  CFDI, tipo comprobante y  forma de pago sean incorrectos."
+                }
+			},
+			{
+				"ticket" : "[2025-03-27] SISGIA.13.5.426.5",
+				"module" : "HOT-FIX - CxC",
+				"title" : "Complementar con fechas la vista de facturas pendientes",
+				"details" : 
+				{
+                    "paso1" : "Se agregan las columnas fechas de creación y facturación en la consulta de historial de facturas."
+                }
+			},
+			{
+				"ticket" : "[2025-03-27] SISGIA.13.5.426.7",
+				"module" : "HOT-FIX - CxC",
+				"title" : "Mostrar folios relacionados en historial de facturas pagadas",
+				"details" : 
+				{
+                    "paso1" : "Se agregan dos columnas para mostrar método de pago y folios de complementos asociados a factura PPD.",
+					"paso2" : "Se realiza la adecuación en consulta para mostrar el método de pago y folios de complementos."
+                }
+			},
+			{
+				"ticket" : "[2025-03-27] SISGIA.13.5.426.6",
+				"module" : "HOT-FIX - CxC",
+				"title" : "Ajuste en consultas de solicitudes (Orden por fecha más reciente)",
+				"details" : 
+				{
+                    "paso1" : "Se modifica la consulta de búsqueda para que los resultados se ordenen por los registros más recientes."
+                }
+			},
+			{
+				"ticket" : "[2025-05-22] SISGIA.6.5.426.4",
+				"module" : "HOT-FIX - Cliente GRUPO SALINAS",
+				"title" : "Ajuste para notificación de alta de servicio",
+				"details" : 
+				{
+                    "paso1" : "Se agrega id de contratante en proceso 1: Inicio de servicio.",
+					"paso2" : "Se actualiza el archivo excel de envios de correos con el id de contratante solicitado."
+                }
+			}
+		]
+	},
+	"v6.8.24":
+	{
+		"fecha de release" : "2025-05-29",
+		"tickets" :[
+			{
+				"ticket" : "[2025-05-29] SISGIA.5.4.288.1",
+				"module" : "HOT-FIX - Reporte/Reporteador",
+				"title" : " Ajustes en validación de status 8 y password",
+				"details" : 
+				{
+                    "paso1" : "Se permite borrar registros con status de error (status 8)",
+					"paso2" : "Se permite generar reportes con logs de error, esto con el fin de detectar errores de registro en base de datos",
+					"paso3" : "Se permiten caracteres especiales para la generacion de contraseña en reportes",
+					"paso4" : "Se permite mostrar caracteres especiales en campo de password"
+                }
+			}
+		]
+	},
+	"v6.8.25":
+	{
+		"fecha de release" : "2025-05-12",
+		"tickets" :[
+			{
+				"ticket" : "[2025-06-11] SISGIA.13.5.426.3",
+				"module" : "HOT-FIX - Hoja de servicio",
+				"title" : "Margen de error para carga de XML",
+				"details" : {
+                    "paso1" : "Se agrega margen de error en el env para carga de XML con ISR."
+                }
+			},
+			{
+				"ticket" : "[2025-06-11] SISGIA.2.5.372.2",
+				"module" : "HOT-FIX - Administración/Pagos",
+				"title" : "Agregar filtro fecha de pago",
+				"details" : {
+                    "paso1" : "Implementación del filtro fecha de pago."
+                }
+			}
+		]
+	}
+}
