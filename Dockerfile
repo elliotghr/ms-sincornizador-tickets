@@ -1,21 +1,25 @@
 FROM python:3.11-slim
 
-# Variables de entorno
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
-# Crear carpeta
 WORKDIR /app
 
-# Instalar dependencias
+# Instalar smbclient y dependencias
+RUN apt-get update && apt-get install -y \
+    smbclient \
+    libsmbclient \
+    && rm -rf /var/lib/apt/lists/*
+
+# Instalar dependencias Python
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copiar el código
+# Copiar código
 COPY app/ ./app/
 
-# Exponer el puerto del webhook
+COPY .env .
+
 EXPOSE 8000
 
-# Comando para ejecutar la app
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--reload", "--port", "8000"]
