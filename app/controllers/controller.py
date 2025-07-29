@@ -133,8 +133,12 @@ def guardar_en_excel(data):
     # Obtener el archivo Excel local, su ruta y el nombre del archivo
     local_file, file_path, excel_file = get_file(data)
 
-    # Extraer los campos necesarios del mensaje del commit
-    ticket, campo_tarea, campo_accion_tomada = obtener_campos_commit(data)
+    try:
+        # Extraer los campos necesarios del mensaje del commit
+        ticket, campo_tarea, campo_accion_tomada = obtener_campos_commit(data)
+    except ValueError as e:
+        print(f"Error al procesar el commit: {e}")
+        return
 
     # Cargar el archivo Excel
     df = pd.read_excel(local_file, sheet_name=1, engine="openpyxl")

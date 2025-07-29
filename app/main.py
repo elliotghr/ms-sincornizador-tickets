@@ -9,7 +9,13 @@ app = FastAPI()
 async def github_webhook(request: Request):
     payload = await request.json()
 
-    guardar_en_excel(payload)
+    try:
+        # Procesar el payload y guardar los datos en Excel
+        guardar_en_excel(payload)
+
+    except Exception as e:
+        print(f"Error al procesar el webhook: {e}")
+        return {"status": "error"}
 
     return {"status": "ok"}
 
